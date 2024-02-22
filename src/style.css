@@ -1,1 +1,39 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+
+.card {
+  background-color: white;
+  color: red;
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.left {
+  font-size: 100px;
+  padding-left: 20px;
+}
+
+.right {
+  font-size: 100px;
+  text-align: right;
+  justify-content: end;
+  padding-right: 20px;
+  transform: scaleY(-1);
+}
+
+.number {
+  font-size: 200px;
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+}
