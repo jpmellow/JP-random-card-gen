@@ -2,38 +2,67 @@
 
 body {
   background-color: green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+button {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .card {
+  width: 350px;
+  height: 500px;
   background-color: white;
-  color: red;
-  width: 400px;
-  height: 600px;
-  border-radius: 20px;
+  border-radius: 9px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  rotate: 4deg;
+  transform: scale(70%);
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.4);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
+}
+.card:hover {
+  rotate: 0deg;
+  transform: scale(85%);
 }
 
-.left {
-  font-size: 100px;
-  padding-left: 20px;
+.top-suit,
+.bottom-suit {
+  font-size: 80px;
+  position: absolute;
 }
 
-.right {
-  font-size: 100px;
-  text-align: right;
-  justify-content: end;
-  padding-right: 20px;
-  transform: scaleY(-1);
+.top-suit {
+  top: 20px;
+  left: 20px;
+}
+
+.bottom-suit {
+  bottom: 20px;
+  right: 20px;
+}
+
+.rotated {
+  transform: rotate(180deg);
 }
 
 .number {
-  font-size: 200px;
-  display: flex;
-  justify-content: center;
-  font-family: "Times New Roman", Times, serif;
+  font-size: 100px;
+  text-align: center;
+}
+
+.black {
+  color: black;
+}
+
+.red {
+  color: red;
 }
