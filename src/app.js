@@ -11,7 +11,7 @@ window.onload = function() {
 };
 
 function generateRandomCard() {
-  const suites = ["♦", "♥", "♠", "♣"];
+  const suits = ["♦", "♥", "♠", "♣"];
   const cards = [
     "A",
     "2",
@@ -28,30 +28,30 @@ function generateRandomCard() {
     "K",
   ];
 
-  const suiteIndex = Math.floor(Math.random() * suites.length);
+  const suitIndex = Math.floor(Math.random() * suits.length);
   const cardIndex = Math.floor(Math.random() * cards.length);
 
-  const randomSuite = suites[suiteIndex];
+  const randomSuit = suits[suitIndex];
   const randomCard = cards[cardIndex];
-  const suiteColor = suiteIndex >= 2 ? "black" : "red";
+  const suitColor = suitIndex >= 2 ? "black" : "red";
 
   const card = document.createElement("div");
-  card.innerHTML = `<div class="top-suit ${suiteColor}">${randomSuite}</div>
-<div class="number ${suiteColor}">${randomCard}</div>
-<div class="bottom-suit rotated ${suiteColor}">${randomSuite}</div>`;
+  card.innerHTML = `<div class="top-suit ${suitColor}">${randomSuit}</div>
+<div class="number ${suitColor}">${randomCard}</div>
+<div class="bottom-suit rotated ${suitColor}">${randomSuit}</div>`;
   card.className = "card";
   document.body.appendChild(card);
 
-  // const topSuite = document.querySelector(".top-suite");
-  // topSuite.innerText = randomSuite;
+  // const topSuit = document.querySelector(".top-suit");
+  // topSuit.innerText = randomSuit;
 
-  // const bottomSuite = document.querySelector(".bottom-suite");
-  // bottomSuite.innerText = randomSuite;
+  // const bottomSuit = document.querySelector(".bottom-suit");
+  // bottomSuit.innerText = randomSuit;
 
   // const cardValue = document.querySelector(".number");
   // cardValue.innerText = randomCard;
 
-  // topSuite.style.color = suiteColor;
-  // bottomSuite.style.color = suiteColor;
-  // cardValue.style.color = suiteColor;
+  // topSuit.style.color = suitColor;
+  // bottomSuit.style.color = suitColor;
+  // cardValue.style.color = suitColor;
 }
